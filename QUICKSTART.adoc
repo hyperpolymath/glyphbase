@@ -1,0 +1,120 @@
+== Glyphbase Quick Start
+
+*Get up and running with Glyphbase in 5 minutes.*
+
+=== Prerequisites
+
+* https://gleam.run[Gleam] 1.0+
+* https://github.com/hyperpolymath/lithoglyph[Lithoglyph] database
+* Erlang/OTP 26+
+
+=== Installation
+
+[source,bash]
+----
+# 1. Clone Glyphbase
+git clone https://github.com/hyperpolymath/glyphbase
+cd glyphbase/server
+
+# 2. Install dependencies
+gleam deps download
+
+# 3. Start the server
+gleam run
+
+# 4. Open your browser
+open http://localhost:4000
+----
+
+=== Your First Table
+
+[arabic]
+. Click *"`+ New Table`"*
+. Choose the *"`Task Tracker`"* template
+. Add a few tasks
+. Try different views: Grid → Kanban → Calendar
+. Click any cell to see its full provenance history
+
+=== Import Example Data
+
+Load pre-made examples:
+
+[source,bash]
+----
+# Task tracker
+curl -X POST http://localhost:4000/api/import \
+  -H "Content-Type: application/json" \
+  -d @examples/task-tracker.json
+
+# Research papers
+curl -X POST http://localhost:4000/api/import \
+  -H "Content-Type: application/json" \
+  -d @examples/research-papers.json
+----
+
+=== Key Features to Try
+
+==== 1. Provenance (Time Travel)
+
+* Right-click any cell → *"`View History`"*
+* See every change with who/when/why
+* Click any point to restore
+
+==== 2. PROMPT Scores
+
+* Open the "`Research Papers`" table
+* See quality scores for each paper
+* Filter by `+prompt_total >= 80+` for high-quality papers only
+
+==== 3. Multiple Views
+
+* *Grid*: Traditional spreadsheet
+* *Kanban*: Drag tasks across status columns
+* *Calendar*: See tasks by due date
+* *Gallery*: Visual cards with images
+
+==== 4. Real-time Collaboration
+
+* Open the same table in two browser windows
+* Edit in one window → see live updates in the other
+* No conflicts, ever (append-only journal)
+
+=== Next Steps
+
+* Read the link:docs/USER-GUIDE.adoc[User Guide]
+* Explore the https://docs.lithoglyph.org/api[API documentation]
+* Join the
+https://github.com/hyperpolymath/glyphbase/discussions[community
+discussions]
+
+=== Self-Hosting
+
+Deploy Glyphbase on your own infrastructure:
+
+==== Docker
+
+[source,bash]
+----
+docker pull ghcr.io/hyperpolymath/glyphbase:latest
+docker run -p 4000:4000 -v ./data:/data glyphbase
+----
+
+==== From Source
+
+[source,bash]
+----
+git clone https://github.com/hyperpolymath/glyphbase
+cd glyphbase/server
+gleam run
+----
+
+=== Getting Help
+
+* 📖 https://docs.lithoglyph.org[Full Documentation]
+* 💬 https://github.com/hyperpolymath/glyphbase/discussions[Community]
+* 🐛 https://github.com/hyperpolymath/glyphbase/issues[Report Issues]
+* ✉️ support@lithoglyph.org
+
+'''''
+
+*Welcome to Glyphbase!* Carve your data in stone. 🪨
