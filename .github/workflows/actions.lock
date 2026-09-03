@@ -3,10 +3,6 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.2'
 workflows:
-    '.github/workflows/governance.yml': []
-    '.github/workflows/label-triage.yml': []
-    '.github/workflows/labels.yml': []
-    '.github/workflows/secret-scanner.yml': []
     '.github/workflows/casket-pages.yml':
         - 'actions/cache@v4.3.0'
         - 'actions/checkout@v4.1.1'
@@ -22,13 +18,16 @@ workflows:
         - 'actions/configure-pages@v5.0.0'
         - 'actions/deploy-pages@v4.0.5'
         - 'actions/upload-pages-artifact@v3.0.1'
+    '.github/workflows/governance.yml': []
     '.github/workflows/hypatia-scan.yml':
         - 'actions/checkout@v4.1.1'
         - 'actions/github-script@v7.0.1'
         - 'actions/upload-artifact@v4.6.2'
         - 'erlef/setup-beam@v1.17.5'
+    '.github/workflows/label-triage.yml': []
+    '.github/workflows/labels.yml': []
     '.github/workflows/push-email-notify.yml':
-        - 'dawidd6/action-send-mail@v3.12.0'
+        - 'hyperpolymath/smtp-notify-action@v0.2.0'
     '.github/workflows/release.yml':
         - 'actions/checkout@v4.1.1'
         - 'docker/build-push-action@v5.1.0'
@@ -40,6 +39,7 @@ workflows:
         - 'actions/checkout@v6.0.1'
         - 'github/codeql-action@v4.31.10'
         - 'ossf/scorecard-action@v2.4.3'
+    '.github/workflows/secret-scanner.yml': []
 dependencies:
     'actions/cache@v4.3.0':
         ref: 'v4.3.0'
@@ -88,11 +88,6 @@ dependencies:
         repo_id: 496012378
         uses:
             - 'actions/upload-artifact@v4'
-    'dawidd6/action-send-mail@v3.12.0':
-        ref: 'v3.12.0'
-        commit: 'sha1-6e502825a508b867ab2954ad6343b68787624c01'
-        owner_id: 9713907
-        repo_id: 222439721
     'docker/build-push-action@v5.1.0':
         ref: 'v5.1.0'
         commit: 'sha1-4a13e500e55cf31b7a5d59a38ab2040ab0f42f56'
@@ -128,6 +123,11 @@ dependencies:
         commit: 'sha1-ec49483bfc012387b227434aba94f59a6ecd0900'
         owner_id: 75048950
         repo_id: 623796603
+    'hyperpolymath/smtp-notify-action@v0.2.0':
+        ref: 'v0.2.0'
+        commit: 'sha1-ede1191ef6ff3ac02c4f4d9efdf837ee517e11d7'
+        owner_id: 6759885
+        repo_id: 1352485172
     'ossf/scorecard-action@v2.4.3':
         ref: 'v2.4.3'
         commit: 'sha1-4eaacf0543bb3f2c246792bd56e8cdeffafb205a'
