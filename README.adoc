@@ -332,7 +332,7 @@ PMPL-1.0-or-later
 
 == Contributing
 
-See link:CONTRIBUTING.adoc[CONTRIBUTING.adoc] for guidelines.
+See link:.github/CONTRIBUTING.md[.github/CONTRIBUTING.md] for guidelines.
 
 == Acknowledgements
 
