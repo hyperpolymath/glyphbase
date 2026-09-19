@@ -417,7 +417,7 @@ just build
 . *Quick Start Guide:* See link:./QUICKSTART.md[QUICKSTART.md]
 . *User Guide:* See link:./docs/USER-GUIDE.adoc[docs/USER-GUIDE.adoc]
 . *API Documentation:* https://docs.lithoglyph.org/api
-. *Contributing:* See link:./CONTRIBUTING.md[CONTRIBUTING.md]
+. *Contributing:* See link:.github/CONTRIBUTING.md[CONTRIBUTING.md]
 
 '''''
 
