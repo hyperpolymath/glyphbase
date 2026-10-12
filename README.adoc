@@ -83,7 +83,7 @@ _Coming soon_
 │  Provenance | Reversibility | PROMPT Scores                 │
 ├─────────────────────────────────────────────────────────────┤
 │  Formal Verification Layer (Idris2)                         │
-│  Type-level guarantees | Correctness proofs                 │
+│  Type-level checks     | Correctness proofs (target)        │
 ├─────────────────────────────────────────────────────────────┤
 │  Storage: Local | Dropbox | GDrive | S3                     │
 └─────────────────────────────────────────────────────────────┘
