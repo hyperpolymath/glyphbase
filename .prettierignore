@@ -2,3 +2,25 @@
 # Prettier must not reformat them.
 package.json
 pnpm-lock.yaml
+# Files without a Prettier baseline (not yet formatted); remove entries as they are formatted.
+.github/CONTRIBUTING.md
+.github/dependabot.yml
+.github/label-classifier.json
+.github/PROVEN-INTEGRATION.md
+.github/workflows/casket-pages.yml
+.github/workflows/codeql.yml
+.github/workflows/deploy-site.yml
+.github/workflows/hypatia-scan.yml
+.github/workflows/labels.yml
+.github/workflows/push-email-notify.yml
+.github/workflows/release.yml
+.github/workflows/scorecard.yml
+docs/site/index.html
+examples/bofig-evidence.json
+examples/research-papers.json
+examples/task-tracker.json
+selur-compose.yml
+ui/index.html
+ui/src/styles/collaboration.css
+ui/src/styles/kanban.css
+ui/vite.config.js
