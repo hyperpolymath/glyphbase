@@ -13,7 +13,6 @@ server/build/
 .lib/
 
 # Deno
-deno.lock
 
 # IDE
 .idea/
